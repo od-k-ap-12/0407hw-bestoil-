@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Schema;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace _0407hw
 {
@@ -23,6 +24,8 @@ namespace _0407hw
     }
     public partial class Form1 : Form
     {
+        MainMenu MainMenu;
+        MenuItem Next, Exit, Reset;
         List<Petrol> PetrolTypes = new List<Petrol>
         {
             new Petrol("A-92",3),
@@ -34,12 +37,37 @@ namespace _0407hw
         public Form1()
         {
             InitializeComponent();
-            foreach(Petrol Petrol in PetrolTypes)
+            foreach (Petrol Petrol in PetrolTypes)
             {
                 PetrolComboBox.Items.Add(Petrol.Name);
             }
-        }
+            MainMenu = new MainMenu();
 
+            Next = new MenuItem("Next");
+            Next.Select += new EventHandler(Next_Click);
+            MainMenu.MenuItems.Add(Next);
+
+            Exit = new MenuItem("Exit");
+            Exit.Click += new EventHandler(Exit_Click);
+            MainMenu.MenuItems.Add(Exit);
+
+            Reset = new MenuItem("Reset");
+            Reset.Click += new EventHandler(Reset_Click);
+            MainMenu.MenuItems.Add(Reset);
+            Menu = MainMenu;
+        }
+        private void Next_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void Exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        private void Reset_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
         private void HotDog_CheckedChanged(object sender, EventArgs e)
         {
             if (HotDog.Checked)
