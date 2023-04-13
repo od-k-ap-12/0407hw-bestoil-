@@ -12,10 +12,7 @@ namespace _0411hw
 {
     public partial class CafeForm : Form
     {
-        public double HotDogPrice = 4;
-        public double HamburgerPrice = 5.4;
-        public double FriesPrice = 7.2;
-        public double ColaPrice = 4.4;
+
         public MenuForm Menu { get; set; }
         public CafeForm()
         {

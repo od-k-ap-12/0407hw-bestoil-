@@ -241,7 +241,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox PetrolComboBox;
         private System.Windows.Forms.TextBox PetrolPrice;
         private System.Windows.Forms.TextBox MoneyTB;
         private System.Windows.Forms.TextBox QuantityTB;
@@ -254,5 +253,6 @@
         private System.Windows.Forms.Button CalculatePetrolPrice;
         private System.Windows.Forms.TextBox FinalPetrolPrice;
         private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.ComboBox PetrolComboBox;
     }
 }

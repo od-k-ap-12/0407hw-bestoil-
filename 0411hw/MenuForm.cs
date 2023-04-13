@@ -38,14 +38,31 @@ namespace _0411hw
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EditForm editForm = new EditForm(OilTypes);
-            editForm.ShowDialog();
+            EditForm editForm = new EditForm();
+            editForm.HotDogPrice= HotDogPrice;
+            editForm.HamburgerPrice= HamburgerPrice;
+            editForm.FriesPrice = FriesPrice;
+            editForm.ColaPrice = ColaPrice;
+            editForm.OilTypes= OilTypes;
+            DialogResult UpdatePrices=editForm.ShowDialog();
+            if (UpdatePrices != DialogResult.OK)
+            {
+                HotDogPrice = editForm.HotDogPrice;
+                HamburgerPrice = editForm.HamburgerPrice;
+                FriesPrice = editForm.FriesPrice;
+                ColaPrice = editForm.ColaPrice;
+                OilTypes = editForm.OilTypes;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             CafeForm cafeForm = new CafeForm();
             cafeForm.Menu = this;
+            cafeForm.HotDogPrice.Text = Convert.ToString(HotDogPrice);
+            cafeForm.HamburgerPrice.Text = Convert.ToString(HamburgerPrice);
+            cafeForm.FriesPrice.Text = Convert.ToString(FriesPrice);
+            cafeForm.ColaPrice.Text = Convert.ToString(ColaPrice);
             cafeForm.ShowDialog();
         }
 
@@ -53,6 +70,7 @@ namespace _0411hw
         {
             OilForm oilForm = new OilForm();
             oilForm.Menu = this;
+            oilForm.OilTypes = OilTypes;
             oilForm.ShowDialog();
         }
     }

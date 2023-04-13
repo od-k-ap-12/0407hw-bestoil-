@@ -66,19 +66,19 @@ namespace _0411hw
             {
                 if (Hamburger.Checked)
                 {
-
+                    HamburgerPrice = Convert.ToDouble(textBox2.Text);
                 }
                 else if(Fries.Checked)
                 {
-
+                    FriesPrice = Convert.ToDouble(textBox2.Text);
                 }
                 else if (CocaCola.Checked)
                 {
-
+                    ColaPrice = Convert.ToDouble(textBox2.Text);
                 }
                 else if (HotDog.Checked)
                 {
-
+                    HotDogPrice = Convert.ToDouble(textBox2.Text);
                 }
             }
         }
@@ -91,7 +91,13 @@ namespace _0411hw
             }
             else
             {
-
+                foreach (Oil Petrol in OilTypes)
+                {
+                    if (Petrol.Name == (string)comboBox1.SelectedItem)
+                    {
+                        Petrol.Price = Convert.ToDouble(textBox1);
+                    }
+                }
             }
         }
     }

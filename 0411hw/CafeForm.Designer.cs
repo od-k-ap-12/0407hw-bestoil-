@@ -258,23 +258,23 @@
         #endregion
 
         private System.Windows.Forms.GroupBox Cola;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox ColaQuantity;
-        private System.Windows.Forms.TextBox FriesQuantity;
-        private System.Windows.Forms.TextBox HamburgerQuantity;
-        private System.Windows.Forms.TextBox HotDogQuantity;
-        private System.Windows.Forms.TextBox ColaPrice;
-        private System.Windows.Forms.TextBox FriesPrice;
-        private System.Windows.Forms.TextBox HamburgerPrice;
-        private System.Windows.Forms.TextBox HotDogPrice;
-        private System.Windows.Forms.CheckBox CocaCola;
-        private System.Windows.Forms.CheckBox Fries;
-        private System.Windows.Forms.CheckBox Hamburger;
-        private System.Windows.Forms.CheckBox HotDog;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Button CalculateCafePrice;
         private System.Windows.Forms.TextBox FinalCafePrice;
         private System.Windows.Forms.Label label11;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.TextBox ColaQuantity;
+        public System.Windows.Forms.TextBox FriesQuantity;
+        public System.Windows.Forms.TextBox HamburgerQuantity;
+        public System.Windows.Forms.TextBox HotDogQuantity;
+        public System.Windows.Forms.TextBox ColaPrice;
+        public System.Windows.Forms.TextBox FriesPrice;
+        public System.Windows.Forms.TextBox HamburgerPrice;
+        public System.Windows.Forms.TextBox HotDogPrice;
+        public System.Windows.Forms.CheckBox CocaCola;
+        public System.Windows.Forms.CheckBox Fries;
+        public System.Windows.Forms.CheckBox Hamburger;
+        public System.Windows.Forms.CheckBox HotDog;
     }
 }

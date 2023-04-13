@@ -12,7 +12,7 @@ namespace _0411hw
 {
     public partial class OilForm : Form
     {
-        public struct Oil
+        public class Oil
         {
             public string Name { get; set; }
             public double Price { get; set; }
@@ -22,14 +22,14 @@ namespace _0411hw
                 Price = price;
             }
         }
-        public List<Oil> OilTypes = new List<Oil>
-        {
+        public List<Oil> OilTypes = new List<Oil>();
+/*        {
             new Oil("A-92",3),
             new Oil("A-95",5),
             new Oil("A-98",8),
             new Oil("Diesel",2)
 
-        };
+        };*/
         public MenuForm Menu { get; set; }
         public OilForm()
         {
