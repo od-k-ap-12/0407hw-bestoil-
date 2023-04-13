@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -58,7 +59,14 @@ namespace _0407hw
         }
         private void Next_Click(object sender, EventArgs e)
         {
-            Close();
+            StreamWriter writer = new StreamWriter("results.txt", true);
+            writer.WriteLine("Petrol: " + PetrolComboBox.SelectedItem+ " for " + FinalPetrolPrice.Text);
+            if (HotDogQuantity.Text != null){writer.WriteLine("HotDog x " + HotDogQuantity);}
+            if (HamburgerQuantity.Text != null) { writer.WriteLine("Hamburger x " + HamburgerQuantity); }
+            if (FriesQuantity.Text != null) { writer.WriteLine("Fries x " + FriesQuantity); }
+            if (ColaQuantity.Text != null) { writer.WriteLine("Coca Cola x " + ColaQuantity); }
+            writer.WriteLine("Food: "+FinalCafePrice.Text);
+            writer.Close();
         }
         private void Exit_Click(object sender, EventArgs e)
         {
@@ -66,7 +74,19 @@ namespace _0407hw
         }
         private void Reset_Click(object sender, EventArgs e)
         {
-            Close();
+            PetrolComboBox.SelectedText = null;
+            PetrolPrice.Text = null;
+            FinalPetrolPrice.Text = null;
+            HamburgerQuantity.Text = null;
+            FriesQuantity.Text = null;
+            ColaQuantity.Text = null;
+            ColaPrice.Text = null;
+            HotDog.Checked= false;
+            Hamburger.Checked= false;
+            Fries.Checked= false;
+            CocaCola.Checked= false;
+            FinalCafePrice.Text = null;
+            FinalPrice.Text = null;
         }
         private void HotDog_CheckedChanged(object sender, EventArgs e)
         {
@@ -178,6 +198,21 @@ namespace _0407hw
         {
             QuantityTB.Enabled= true;
             MoneyTB.Enabled= false;
+        }
+
+        private void ContextNext_Click(object sender, EventArgs e)
+        {
+            Next.PerformClick();
+        }
+
+        private void ContextExit_Click(object sender, EventArgs e)
+        {
+            Exit.PerformClick();
+        }
+
+        private void ContextReset_Click(object sender, EventArgs e)
+        {
+            Reset.PerformClick();
         }
 
         private void Money_CheckedChanged(object sender, EventArgs e)

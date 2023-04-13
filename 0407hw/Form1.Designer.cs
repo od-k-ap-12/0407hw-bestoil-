@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,12 +69,17 @@
             this.FinalPrice = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.CalculatePrice = new System.Windows.Forms.Button();
+            this.ContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ContextNext = new System.Windows.Forms.ToolStripMenuItem();
+            this.ContextExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.ContextReset = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.Cola.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.ContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -479,6 +485,36 @@
             this.CalculatePrice.UseVisualStyleBackColor = true;
             this.CalculatePrice.Click += new System.EventHandler(this.CalculatePrice_Click);
             // 
+            // ContextMenu
+            // 
+            this.ContextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ContextNext,
+            this.ContextExit,
+            this.ContextReset});
+            this.ContextMenu.Name = "ContextMenu";
+            this.ContextMenu.Size = new System.Drawing.Size(103, 70);
+            // 
+            // ContextNext
+            // 
+            this.ContextNext.Name = "ContextNext";
+            this.ContextNext.Size = new System.Drawing.Size(102, 22);
+            this.ContextNext.Text = "Next";
+            this.ContextNext.Click += new System.EventHandler(this.ContextNext_Click);
+            // 
+            // ContextExit
+            // 
+            this.ContextExit.Name = "ContextExit";
+            this.ContextExit.Size = new System.Drawing.Size(102, 22);
+            this.ContextExit.Text = "Exit";
+            this.ContextExit.Click += new System.EventHandler(this.ContextExit_Click);
+            // 
+            // ContextReset
+            // 
+            this.ContextReset.Name = "ContextReset";
+            this.ContextReset.Size = new System.Drawing.Size(102, 22);
+            this.ContextReset.Text = "Reset";
+            this.ContextReset.Click += new System.EventHandler(this.ContextReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -502,6 +538,7 @@
             this.groupBox5.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.ContextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -548,6 +585,10 @@
         private System.Windows.Forms.TextBox FinalPrice;
         private System.Windows.Forms.Button CalculatePetrolPrice;
         private System.Windows.Forms.Button CalculateCafePrice;
+        private System.Windows.Forms.ContextMenuStrip ContextMenu;
+        private System.Windows.Forms.ToolStripMenuItem ContextNext;
+        private System.Windows.Forms.ToolStripMenuItem ContextExit;
+        private System.Windows.Forms.ToolStripMenuItem ContextReset;
     }
 }
 
